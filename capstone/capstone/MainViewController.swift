@@ -11,13 +11,18 @@ import UIKit
 class MainViewController: UIViewController {
     
     
-
+   
+    @IBOutlet var viewLYR: UITextView!
+    
+    var songgggg:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,7 +35,7 @@ class MainViewController: UIViewController {
         
         let flk = LyricsNetworking()
       
-        flk.getLyrics(artist: "coldplay", title: "paradise", completion: {
+        flk.getLyrics(artist: "coldplay", title: "Trouble", completion: {
             error,song in
             
             if error != nil{
@@ -40,7 +45,7 @@ class MainViewController: UIViewController {
             }
             
             else{
-                print(song!)
+                self.songgggg = song!
             }
             
             
@@ -59,7 +64,12 @@ class MainViewController: UIViewController {
            // try! self.delegate.stack.saveContext()
         }
         
+        self.viewLYR.text = songgggg
+        
     }
+    
+    
 
+    
 
 }
