@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		089211611FF393A500327313 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211601FF393A500327313 /* MainViewController.swift */; };
 		08E986F11FF2BB6400BCB7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E986F01FF2BB6400BCB7F7 /* AppDelegate.swift */; };
 		08E986F61FF2BB6400BCB7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E986F41FF2BB6400BCB7F7 /* Main.storyboard */; };
 		08E986F81FF2BB6400BCB7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E986F71FF2BB6400BCB7F7 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		089211601FF393A500327313 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		08E986ED1FF2BB6400BCB7F7 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E986F01FF2BB6400BCB7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E986F51FF2BB6400BCB7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				08E986F71FF2BB6400BCB7F7 /* Assets.xcassets */,
 				08E986F91FF2BB6400BCB7F7 /* LaunchScreen.storyboard */,
 				08E986FC1FF2BB6400BCB7F7 /* Info.plist */,
+				089211601FF393A500327313 /* MainViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089211611FF393A500327313 /* MainViewController.swift in Sources */,
 				08E987201FF2C21A00BCB7F7 /* LyricsNetworking.swift in Sources */,
 				08E986F11FF2BB6400BCB7F7 /* AppDelegate.swift in Sources */,
 			);

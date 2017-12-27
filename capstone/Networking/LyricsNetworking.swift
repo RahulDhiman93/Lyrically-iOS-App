@@ -11,30 +11,43 @@ import UIKit
 
 struct LyricsNetworking {
     
-    var lyricsURL:[String]
-    var songLyrics:String
    
-    func getLyrics(artist:String,title:String,completion: @escaping (_ error:String?,_ data:[String]?)->())
-    {
+   
+    func getLyrics(artist:String,title:String, completion:@escaping (_ error:String?,_ data:String?)->())
+     {
         
-        let url = "https://api.lyrics.ovh/v1/\(artist)/\(title)"
+        var lyr:String = ""
         
+        let singer = artist.replacingOccurrences(of: " ", with: "%20")
+        let song = title.replacingOccurrences(of: " ", with: "%20")
+        
+        
+        let url =  URL(string:"https://api.lyrics.ovh/v1/\(singer)/\(song)")!
         
         let session = URLSession.shared
-        
-        let task = session.dataTask(with: URL(string: url)!){data,response,error in
+       
+        let task = session.dataTask(with: url) { data,response,error in
             
-            if error != nil{
+            if error != nil {
                 completion(error?.localizedDescription,nil)
+                return
             }
             
-            let Data = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
+            let parsedata = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as AnyObject
             
-            if let Lyrics = Data["lyrics"] as? [String:Any] {
-                print(Lyrics)
+            if let data11 = parsedata["lyrics"] as? String {
+                lyr = data11
+                print("im in datatat")
+                completion(nil,lyr)
             }
-            
-        }
+            else{
+                print("errrrrrororoororor")
+            }
+           }
+        
         task.resume()
+       
     }
+
+
 }
