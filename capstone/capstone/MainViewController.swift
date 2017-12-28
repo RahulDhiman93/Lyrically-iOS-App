@@ -34,6 +34,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
         
         self.view?.alpha = 0.7
        view.endEditing(true)
+        self.UISetup(enable: false)
         
         var ar = artistname.text!
         var sg = songname.text!
@@ -72,10 +73,16 @@ class MainViewController: UIViewController,UITextViewDelegate {
             else{
                 DispatchQueue.main.async {
                 self.songgggg = song!
+                    //print(self.songgggg)
+                    if self.songgggg == "Lyrics not found!!"{
+                        self.alert(message: "Lyrics not found!!")
+                        self.UISetup(enable: false)
+                    }
+                    else{
                     self.ind.stopAnimating()
                     self.UISetup(enable: true)
-                    
-            }
+                    self.performSegue(withIdentifier: "ss", sender: self.songgggg)
+                    }}
                 }
             
         })
@@ -98,6 +105,19 @@ class MainViewController: UIViewController,UITextViewDelegate {
       
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return false
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sg = segue.destination as! LyricsViewController
+        sg.song = sender as! String
+    }
+    
     
     
     func UISetup(enable:Bool)
@@ -153,4 +173,5 @@ extension MainViewController {
             self.present(alertview, animated: true, completion: nil)
         }
     }
+    
 }

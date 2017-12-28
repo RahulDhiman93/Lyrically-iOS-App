@@ -38,17 +38,21 @@ struct LyricsNetworking {
             if let data11 = parsedata["lyrics"] as? String {
                 lyr = data11
                 print("im in datatat")
-                print(lyr)
+                //print(lyr)
                 completion(nil,lyr)
             }
             else{
-                print("errrrrrororoororor")
+              completion(nil,"Lyrics not found!!")
             }
            }
         
         task.resume()
        
+        
     }
-
+    
+    
 
 }
+
+
