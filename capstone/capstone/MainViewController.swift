@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
 
 class MainViewController: UIViewController,UITextViewDelegate {
-    
+
     
     @IBOutlet var searchBtn: UIButton!
     

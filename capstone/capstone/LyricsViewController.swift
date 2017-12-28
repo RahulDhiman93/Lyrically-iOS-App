@@ -10,13 +10,7 @@ import UIKit
 
 class LyricsViewController: UIViewController {
     
-    @IBAction func back(_ sender: Any) {
-        
-       dismiss(animated: true, completion: nil)
-        print("IM IN BACK BTN")
-        
-    }
-    
+
     
    
     

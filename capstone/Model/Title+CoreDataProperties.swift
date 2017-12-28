@@ -15,13 +15,19 @@ extension Title {
 }
     
     @NSManaged public var lyrics:String
-    @NSManaged public var song:String
+   
     
-    
-    
-    
-    
-    
+    convenience init(lyrics:String, context: NSManagedObjectContext){
+        if let entit = NSEntityDescription.entity(forEntityName: "Title", in: context)
+        {
+            self.init(entity: entit, insertInto:context)
+            self.lyrics = lyrics
+        }
+        else{
+            fatalError("NO ENTITY FOUND!!")
+        }
+    }
     
 }
+
 

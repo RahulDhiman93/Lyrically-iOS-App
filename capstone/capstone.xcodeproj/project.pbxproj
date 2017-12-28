@@ -15,8 +15,13 @@
 		089211701FF55AFB00327313 /* Title+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892116F1FF55AFB00327313 /* Title+CoreDataClass.swift */; };
 		089211721FF55B2500327313 /* Artist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */; };
 		089211741FF55B3600327313 /* Title+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211731FF55B3600327313 /* Title+CoreDataProperties.swift */; };
+		0892117A1FF55E5400327313 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211791FF55E5400327313 /* TableViewCell.swift */; };
+		0892117E1FF5644B00327313 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892117D1FF5644B00327313 /* TableViewController.swift */; };
+		089211801FF5649A00327313 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892117F1FF5649A00327313 /* CoreDataViewController.swift */; };
+		089211821FF564CB00327313 /* OriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211811FF564CB00327313 /* OriginViewController.swift */; };
+		089211841FF564D700327313 /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211831FF564D700327313 /* FetchViewController.swift */; };
+		089211861FF57F1700327313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089211851FF57F1700327313 /* Main.storyboard */; };
 		08E986F11FF2BB6400BCB7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E986F01FF2BB6400BCB7F7 /* AppDelegate.swift */; };
-		08E986F61FF2BB6400BCB7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E986F41FF2BB6400BCB7F7 /* Main.storyboard */; };
 		08E986F81FF2BB6400BCB7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E986F71FF2BB6400BCB7F7 /* Assets.xcassets */; };
 		08E986FB1FF2BB6400BCB7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E986F91FF2BB6400BCB7F7 /* LaunchScreen.storyboard */; };
 		08E987061FF2BB6400BCB7F7 /* capstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E987051FF2BB6400BCB7F7 /* capstoneTests.swift */; };
@@ -50,9 +55,14 @@
 		0892116F1FF55AFB00327313 /* Title+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataClass.swift"; sourceTree = "<group>"; };
 		089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artist+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		089211731FF55B3600327313 /* Title+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		089211791FF55E5400327313 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0892117D1FF5644B00327313 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0892117F1FF5649A00327313 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		089211811FF564CB00327313 /* OriginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginViewController.swift; sourceTree = "<group>"; };
+		089211831FF564D700327313 /* FetchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
+		089211851FF57F1700327313 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		08E986ED1FF2BB6400BCB7F7 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E986F01FF2BB6400BCB7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08E986F51FF2BB6400BCB7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08E986F71FF2BB6400BCB7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08E986FA1FF2BB6400BCB7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08E986FC1FF2BB6400BCB7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,13 +138,18 @@
 			isa = PBXGroup;
 			children = (
 				08E986F01FF2BB6400BCB7F7 /* AppDelegate.swift */,
-				08E986F41FF2BB6400BCB7F7 /* Main.storyboard */,
+				089211851FF57F1700327313 /* Main.storyboard */,
 				08E986F71FF2BB6400BCB7F7 /* Assets.xcassets */,
 				08E986F91FF2BB6400BCB7F7 /* LaunchScreen.storyboard */,
 				08E986FC1FF2BB6400BCB7F7 /* Info.plist */,
 				089211601FF393A500327313 /* MainViewController.swift */,
+				089211831FF564D700327313 /* FetchViewController.swift */,
 				089211621FF400D400327313 /* LyricsViewController.swift */,
 				089211651FF4F51000327313 /* Model.xcdatamodeld */,
+				089211791FF55E5400327313 /* TableViewCell.swift */,
+				0892117D1FF5644B00327313 /* TableViewController.swift */,
+				0892117F1FF5649A00327313 /* CoreDataViewController.swift */,
+				089211811FF564CB00327313 /* OriginViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -273,8 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E986FB1FF2BB6400BCB7F7 /* LaunchScreen.storyboard in Resources */,
+				089211861FF57F1700327313 /* Main.storyboard in Resources */,
 				08E986F81FF2BB6400BCB7F7 /* Assets.xcassets in Resources */,
-				08E986F61FF2BB6400BCB7F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,15 +315,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				089211611FF393A500327313 /* MainViewController.swift in Sources */,
+				089211801FF5649A00327313 /* CoreDataViewController.swift in Sources */,
 				08E987201FF2C21A00BCB7F7 /* LyricsNetworking.swift in Sources */,
 				089211721FF55B2500327313 /* Artist+CoreDataProperties.swift in Sources */,
+				089211821FF564CB00327313 /* OriginViewController.swift in Sources */,
 				089211701FF55AFB00327313 /* Title+CoreDataClass.swift in Sources */,
 				089211741FF55B3600327313 /* Title+CoreDataProperties.swift in Sources */,
 				089211671FF4F51000327313 /* Model.xcdatamodeld in Sources */,
 				0892116C1FF55AAC00327313 /* Artist+CoreDataClass.swift in Sources */,
+				0892117E1FF5644B00327313 /* TableViewController.swift in Sources */,
 				0892116A1FF55A7C00327313 /* CoreDataStack.swift in Sources */,
+				0892117A1FF55E5400327313 /* TableViewCell.swift in Sources */,
 				089211631FF400D400327313 /* LyricsViewController.swift in Sources */,
 				08E986F11FF2BB6400BCB7F7 /* AppDelegate.swift in Sources */,
+				089211841FF564D700327313 /* FetchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +364,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		08E986F41FF2BB6400BCB7F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08E986F51FF2BB6400BCB7F7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		08E986F91FF2BB6400BCB7F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
