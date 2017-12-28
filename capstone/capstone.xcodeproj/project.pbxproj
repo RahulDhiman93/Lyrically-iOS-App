@@ -12,9 +12,7 @@
 		089211671FF4F51000327313 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089211651FF4F51000327313 /* Model.xcdatamodeld */; };
 		0892116A1FF55A7C00327313 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211691FF55A7C00327313 /* CoreDataStack.swift */; };
 		0892116C1FF55AAC00327313 /* Artist+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892116B1FF55AAC00327313 /* Artist+CoreDataClass.swift */; };
-		089211701FF55AFB00327313 /* Title+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892116F1FF55AFB00327313 /* Title+CoreDataClass.swift */; };
 		089211721FF55B2500327313 /* Artist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */; };
-		089211741FF55B3600327313 /* Title+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211731FF55B3600327313 /* Title+CoreDataProperties.swift */; };
 		0892117A1FF55E5400327313 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211791FF55E5400327313 /* TableViewCell.swift */; };
 		0892117E1FF5644B00327313 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892117D1FF5644B00327313 /* TableViewController.swift */; };
 		089211801FF5649A00327313 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0892117F1FF5649A00327313 /* CoreDataViewController.swift */; };
@@ -52,9 +50,7 @@
 		089211661FF4F51000327313 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		089211691FF55A7C00327313 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		0892116B1FF55AAC00327313 /* Artist+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artist+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0892116F1FF55AFB00327313 /* Title+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataClass.swift"; sourceTree = "<group>"; };
 		089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artist+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		089211731FF55B3600327313 /* Title+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		089211791FF55E5400327313 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0892117D1FF5644B00327313 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0892117F1FF5649A00327313 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
@@ -105,9 +101,7 @@
 			children = (
 				089211691FF55A7C00327313 /* CoreDataStack.swift */,
 				0892116B1FF55AAC00327313 /* Artist+CoreDataClass.swift */,
-				0892116F1FF55AFB00327313 /* Title+CoreDataClass.swift */,
 				089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */,
-				089211731FF55B3600327313 /* Title+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,8 +313,6 @@
 				08E987201FF2C21A00BCB7F7 /* LyricsNetworking.swift in Sources */,
 				089211721FF55B2500327313 /* Artist+CoreDataProperties.swift in Sources */,
 				089211821FF564CB00327313 /* OriginViewController.swift in Sources */,
-				089211701FF55AFB00327313 /* Title+CoreDataClass.swift in Sources */,
-				089211741FF55B3600327313 /* Title+CoreDataProperties.swift in Sources */,
 				089211671FF4F51000327313 /* Model.xcdatamodeld in Sources */,
 				0892116C1FF55AAC00327313 /* Artist+CoreDataClass.swift in Sources */,
 				0892117E1FF5644B00327313 /* TableViewController.swift in Sources */,

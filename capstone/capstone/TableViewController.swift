@@ -23,7 +23,7 @@ class TableViewController:CoreDataViewController,UITableViewDataSource{
     var ffetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>?
     
     var pp :Artist!
-    var tt: Title!
+   
   
     var artName = [String]()
     var sgName = [String]()
@@ -32,14 +32,6 @@ class TableViewController:CoreDataViewController,UITableViewDataSource{
         super.viewDidLoad()
         self.loadData()
         
-        let frr = NSFetchRequest<Artist>(entityName:"Artist")
-        frr.sortDescriptors = [NSSortDescriptor(key:"artist",ascending: true)]
-        //print("what")
-        let pred = NSPredicate(format: "artist = %@", argumentArray:[self.pp])
-        frr.predicate = pred
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: frr, managedObjectContext: (delegate.stack.context), sectionNameKeyPath: nil, cacheName: nil)
-        self.fetchedResultsController?.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,7 +81,7 @@ extension TableViewController {
         fetchDue(fetchedResultsController: ffetchedResultsController, completion: {
             
             
-            let p:[Artist] = fetchedResultsController?.fetchedObjects as! [Artist]
+            let p = [Artist]()
             
             DispatchQueue.global(qos: .userInitiated).async {
                 

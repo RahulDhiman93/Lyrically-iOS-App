@@ -17,12 +17,12 @@ extension Artist {
     @NSManaged public var name:String
     @NSManaged public var song:String
     
-    convenience init(name:String ,song:String,context: NSManagedObjectContext){
+    convenience init(named:String ,songed:String, context: NSManagedObjectContext){
         if let entit = NSEntityDescription.entity(forEntityName: "Artist", in: context)
         {
             self.init(entity: entit, insertInto:context)
-           self.name = name
-            self.song = song
+           self.name = named
+            self.song = songed
         }
         else{
             fatalError("NO ENTITY FOUND!!")
@@ -30,19 +30,8 @@ extension Artist {
     }
 }
 
-extension Artist{
-    @objc(addLyricsObject:)
-    @NSManaged public func addToLyrics(_ value: Title)
-    
-    @objc(removeLyricsObject:)
-    @NSManaged public func removeFromLyrics(_ value: Title)
-    
-    @objc(addLyrics:)
-    @NSManaged public func addToLyrics(_ value: String)
-    
-    @objc(removeLyrics:)
-    @NSManaged public func removeFromLyrics(_ value: String)
-}
+
+
     
     
 

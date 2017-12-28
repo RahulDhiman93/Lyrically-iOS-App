@@ -9,9 +9,12 @@
 import UIKit
 import CoreData
 
+let delegate = UIApplication.shared.delegate as! AppDelegate
 
 class MainViewController: UIViewController,UITextViewDelegate {
 
+    
+    let stack =  delegate.stack
     
     @IBOutlet var searchBtn: UIButton!
     
@@ -20,6 +23,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
     
     let ind = UIActivityIndicatorView()
     
+    var fetchedResultsController : NSFetchedResultsController<NSFetchRequestResult>?
     
     var songgggg:String = ""
     
@@ -33,6 +37,12 @@ class MainViewController: UIViewController,UITextViewDelegate {
     }
     
     @IBAction func btn(_ sender: Any) {
+        
+        
+      /*  let _ = Pin(latitude: cc.latitude, longitude: cc.longitude, context: (fetchedResultsController?.managedObjectContext)!)
+        try! stack.saveContext()*/
+        
+        
         
         self.view?.alpha = 0.7
        view.endEditing(true)
@@ -55,7 +65,10 @@ class MainViewController: UIViewController,UITextViewDelegate {
         
         func get_Lyr(_ completion: @escaping (_ done: Bool, _ error: String?) -> Void){
         
-        
+            let _ = Artist(named:artistname.text! as String,songed:songname.text! as String,context:(fetchedResultsController?.managedObjectContext)!)
+            try! stack.saveContext()
+            
+            
         let flk = LyricsNetworking()
             
             if artistname.text == "" || songname.text == "" {
@@ -102,6 +115,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 }
             }
            // try! self.delegate.stack.saveContext()
+            try! delegate.stack.saveContext()
         }
         
       
