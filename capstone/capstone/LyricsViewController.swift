@@ -28,8 +28,12 @@ class LyricsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if self.song == "" {
+            print("IM EMPTY")
+        }
         
       lyricstext.text = song
+        lyricstext.isUserInteractionEnabled = true
         
     }
 

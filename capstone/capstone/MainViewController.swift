@@ -9,12 +9,11 @@
 import UIKit
 import CoreData
 
-let delegate = UIApplication.shared.delegate as! AppDelegate
-
 class MainViewController: UIViewController,UITextViewDelegate {
 
     
-    let stack =  delegate.stack
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet var searchBtn: UIButton!
     
@@ -22,8 +21,6 @@ class MainViewController: UIViewController,UITextViewDelegate {
     @IBOutlet var songname: UITextField!
     
     let ind = UIActivityIndicatorView()
-    
-    var fetchedResultsController : NSFetchedResultsController<NSFetchRequestResult>?
     
     var songgggg:String = ""
     
@@ -39,10 +36,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
     @IBAction func btn(_ sender: Any) {
         
         
-      /*  let _ = Pin(latitude: cc.latitude, longitude: cc.longitude, context: (fetchedResultsController?.managedObjectContext)!)
-        try! stack.saveContext()*/
-        
-        
+        print("IM IN BTN")
         
         self.view?.alpha = 0.7
        view.endEditing(true)
@@ -64,9 +58,6 @@ class MainViewController: UIViewController,UITextViewDelegate {
         
         
         func get_Lyr(_ completion: @escaping (_ done: Bool, _ error: String?) -> Void){
-        
-            let _ = Artist(named:artistname.text! as String,songed:songname.text! as String,context:(fetchedResultsController?.managedObjectContext)!)
-            try! stack.saveContext()
             
             
         let flk = LyricsNetworking()
@@ -75,6 +66,9 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 alert(message: "Please fill in all the details")
             }
             else{
+                
+                
+                
             
             flk.getLyrics(artist: ar, title: sg, completion: {
             error,song in
@@ -101,6 +95,22 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 }
             
         })
+                
+                let newSong = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: context)
+                newSong.setValue(self.artistname.text!, forKey: "name")
+                newSong.setValue(self.songname.text!, forKey: "song")
+                newSong.setValue(self.songgggg, forKey: "lyrics")
+                
+                
+                do{
+                    try context.save()
+                }
+                catch{
+                    alert(message: "Problem saving it to app!!")
+                }
+                
+                
+                
             self.artistname.text = ""
                 self.songname.text = ""
             }
@@ -115,7 +125,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 }
             }
            // try! self.delegate.stack.saveContext()
-            try! delegate.stack.saveContext()
+            //try! delegate.stack.saveContext()
         }
         
       

@@ -16,6 +16,7 @@ extension Artist {
     
     @NSManaged public var name:String
     @NSManaged public var song:String
+    @NSManaged public var lyrics:String
     
     convenience init(named:String ,songed:String, context: NSManagedObjectContext){
         if let entit = NSEntityDescription.entity(forEntityName: "Artist", in: context)
