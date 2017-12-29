@@ -95,38 +95,34 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
                         self.alert(message: "Lyrics not found!!")
                        self.UISetup(enable: false)
                         self.ind.stopAnimating()
-                        self.flag = 0
+                        self.flag = 1
                     }
                     else{
-                        self.flag = 1
+                        self.flag = 0
+                        print("Flag is here")
+                        print(self.flag)
                     self.ind.stopAnimating()
                     self.UISetup(enable: true)
                     self.performSegue(withIdentifier: "ss", sender: self.songgggg)
                         //self.save(img: self.songgggg)
-                        
-                    }
+                        self.savetocore(art: ar, sgt: sg)
+                       }
                     
                 }
+                
                 }
+                
             
         })
-                    
+                print("anpther flag here")
+                print(self.flag)
+                
+                if self.flag == 0 {
                     print("IN CORE DATA:")
                 
-                let newSong = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: context)
-                newSong.setValue(self.artistname.text!, forKey: "name")
-                newSong.setValue(self.songname.text!, forKey: "song")
-                newSong.setValue(self.songgggg, forKey: "lyrics")
-                
-                
-                do{
-                    try context.save()
+               
                 }
-                catch{
-                    alert(message: "Problem saving it to app!!")
-                }
-                
-                
+            
                 
             self.artistname.text = ""
                 self.songname.text = ""
@@ -191,7 +187,20 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
         }
     }
    
-    
+    func savetocore(art:String,sgt:String){
+        let newSong = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: self.context)
+        newSong.setValue(art, forKey: "name")
+        newSong.setValue(sgt, forKey: "song")
+        newSong.setValue(self.songgggg, forKey: "lyrics")
+        
+        
+        do{
+            try self.context.save()
+        }
+        catch{
+            self.alert(message: "Problem saving it to app!!")
+        }
+    }
     
 }
 

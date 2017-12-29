@@ -13,6 +13,10 @@ import UIKit
 
 class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    @IBAction func reload(_ sender: Any) {
+        self.fetchData()
+        self.tableView.reloadData()
+    }
     @IBOutlet weak var tableView: UITableView!
     
     var userArray:[Artist] = []
