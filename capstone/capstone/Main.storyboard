@@ -197,7 +197,7 @@
                         <outlet property="artistname" destination="MH6-Gz-prd" id="WHb-Gi-ngt"/>
                         <outlet property="searchBtn" destination="XxQ-gc-WJR" id="yLc-TW-GUv"/>
                         <outlet property="songname" destination="X3g-MS-r6R" id="0bF-ll-A7g"/>
-                        <segue destination="HCR-T3-Im8" kind="modal" identifier="ss" id="wQN-hM-pgg"/>
+                        <segue destination="HCR-T3-Im8" kind="show" identifier="ss" id="wQN-hM-pgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JV-mp-yUs" userLabel="First Responder" sceneMemberID="firstResponder"/>

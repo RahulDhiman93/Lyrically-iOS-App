@@ -15,6 +15,8 @@ class MainViewController: UIViewController,UITextViewDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var flag:Int = 0
+    
     @IBOutlet var searchBtn: UIButton!
     
     @IBOutlet var artistname: UITextField!
@@ -86,8 +88,10 @@ class MainViewController: UIViewController,UITextViewDelegate {
                     if self.songgggg == "Lyrics not found!!"{
                         self.alert(message: "Lyrics not found!!")
                         self.UISetup(enable: false)
+                        self.flag = 0
                     }
                     else{
+                        self.flag = 1
                     self.ind.stopAnimating()
                     self.UISetup(enable: true)
                     self.performSegue(withIdentifier: "ss", sender: self.songgggg)
@@ -95,6 +99,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 }
             
         })
+                if flag == 1 {
                 
                 let newSong = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: context)
                 newSong.setValue(self.artistname.text!, forKey: "name")
@@ -108,7 +113,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 catch{
                     alert(message: "Problem saving it to app!!")
                 }
-                
+                }
                 
                 
             self.artistname.text = ""
