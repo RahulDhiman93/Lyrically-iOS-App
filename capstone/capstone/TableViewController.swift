@@ -38,6 +38,7 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        print("IN CELLLLLLLL")
         let arName = userArray[indexPath.row]
         cell.artistName.text = arName.name
         cell.TitleName.text = arName.song

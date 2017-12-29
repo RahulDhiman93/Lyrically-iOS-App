@@ -9,13 +9,15 @@
 import UIKit
 import CoreData
 
-class MainViewController: UIViewController,UITextViewDelegate {
+class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
 
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var flag:Int = 0
+    
+    
     
     @IBOutlet var searchBtn: UIButton!
     
@@ -28,7 +30,10 @@ class MainViewController: UIViewController,UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         DispatchQueue.main.async {
+        self.artistname.delegate = self
+        self.songname.delegate = self
+        
+        DispatchQueue.main.async {
       
         self.TextField([self.artistname,self.songname])
             
@@ -41,7 +46,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
         print("IM IN BTN")
         
         self.view?.alpha = 0.7
-       view.endEditing(true)
+        view.endEditing(true)
         self.UISetup(enable: false)
         
         var ar = artistname.text!
@@ -50,7 +55,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
         print(ar)
         print(sg)
         
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        //UIApplication.shared.beginIgnoringInteractionEvents()
         
         ind.activityIndicatorViewStyle = .gray
         ind.hidesWhenStopped=true
@@ -66,6 +71,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
             
             if artistname.text == "" || songname.text == "" {
                 alert(message: "Please fill in all the details")
+                self.ind.stopAnimating()
             }
             else{
                 
@@ -87,7 +93,8 @@ class MainViewController: UIViewController,UITextViewDelegate {
                     //print(self.songgggg)
                     if self.songgggg == "Lyrics not found!!"{
                         self.alert(message: "Lyrics not found!!")
-                        self.UISetup(enable: false)
+                       self.UISetup(enable: false)
+                        self.ind.stopAnimating()
                         self.flag = 0
                     }
                     else{
@@ -95,11 +102,16 @@ class MainViewController: UIViewController,UITextViewDelegate {
                     self.ind.stopAnimating()
                     self.UISetup(enable: true)
                     self.performSegue(withIdentifier: "ss", sender: self.songgggg)
-                    }}
+                        //self.save(img: self.songgggg)
+                        
+                    }
+                    
+                }
                 }
             
         })
-                if flag == 1 {
+                    
+                    print("IN CORE DATA:")
                 
                 let newSong = NSEntityDescription.insertNewObject(forEntityName: "Artist", into: context)
                 newSong.setValue(self.artistname.text!, forKey: "name")
@@ -113,7 +125,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
                 catch{
                     alert(message: "Problem saving it to app!!")
                 }
-                }
+                
                 
                 
             self.artistname.text = ""
@@ -132,10 +144,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
            // try! self.delegate.stack.saveContext()
             //try! delegate.stack.saveContext()
         }
-        
-      
-        
-    }
+        }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -181,6 +190,7 @@ class MainViewController: UIViewController,UITextViewDelegate {
             
         }
     }
+   
     
     
 }
@@ -199,10 +209,14 @@ extension MainViewController {
                 DispatchQueue.main.async {
                     
                    self.UISetup(enable: true)
+                    self.dismiss(animated: true, completion: nil)
+                    
                 }
             }))
             self.present(alertview, animated: true, completion: nil)
         }
     }
+    
+   
     
 }

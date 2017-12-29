@@ -31,9 +31,10 @@ class LyricsViewController: UIViewController {
         if self.song == "" {
             print("IM EMPTY")
         }
-        
+  
       lyricstext.text = song
         lyricstext.isUserInteractionEnabled = true
+        lyricstext.isEditable = false
         
     }
 

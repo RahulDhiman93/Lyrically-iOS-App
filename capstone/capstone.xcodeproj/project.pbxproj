@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08256D9D1FF645E5005DADD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08256D9C1FF645E4005DADD9 /* Main.storyboard */; };
+		08462CA01FF6E4FC004F31D6 /* LYRICS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08462C9F1FF6E4FC004F31D6 /* LYRICS.swift */; };
 		089211611FF393A500327313 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211601FF393A500327313 /* MainViewController.swift */; };
 		089211631FF400D400327313 /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089211621FF400D400327313 /* LyricsViewController.swift */; };
 		089211671FF4F51000327313 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089211651FF4F51000327313 /* Model.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		08256D9C1FF645E4005DADD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		08462C9F1FF6E4FC004F31D6 /* LYRICS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYRICS.swift; sourceTree = "<group>"; };
 		089211601FF393A500327313 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		089211621FF400D400327313 /* LyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
 		089211661FF4F51000327313 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				089211691FF55A7C00327313 /* CoreDataStack.swift */,
 				0892116B1FF55AAC00327313 /* Artist+CoreDataClass.swift */,
 				089211711FF55B2500327313 /* Artist+CoreDataProperties.swift */,
+				08462C9F1FF6E4FC004F31D6 /* LYRICS.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				089211821FF564CB00327313 /* OriginViewController.swift in Sources */,
 				089211671FF4F51000327313 /* Model.xcdatamodeld in Sources */,
 				0892116C1FF55AAC00327313 /* Artist+CoreDataClass.swift in Sources */,
+				08462CA01FF6E4FC004F31D6 /* LYRICS.swift in Sources */,
 				0892117E1FF5644B00327313 /* TableViewController.swift in Sources */,
 				0892116A1FF55A7C00327313 /* CoreDataStack.swift in Sources */,
 				0892117A1FF55E5400327313 /* TableViewCell.swift in Sources */,
