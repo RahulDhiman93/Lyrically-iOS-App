@@ -13,6 +13,7 @@ import UIKit
 
 class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    
     @IBAction func reload(_ sender: Any) {
         self.fetchData()
         self.tableView.reloadData()
@@ -32,6 +33,8 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
         self.tableView.reloadData()
         
     }
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
       return 1

@@ -82,34 +82,36 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_library" translatesAutoresizingMaskIntoConstraints="NO" id="3aj-6J-fsE">
-                                                            <rect key="frame" x="7" y="5" width="117" height="84"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_library" translatesAutoresizingMaskIntoConstraints="NO" id="3aj-6J-fsE">
+                                                            <rect key="frame" x="7" y="11" width="82" height="78"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-Y8-hvL">
-                                                            <rect key="frame" x="132" y="5" width="228" height="38"/>
+                                                            <rect key="frame" x="158" y="5" width="202" height="38"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhU-k7-ggB" customClass="Ta">
-                                                            <rect key="frame" x="132" y="51" width="228" height="21"/>
+                                                            <rect key="frame" x="158" y="51" width="202" height="21"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="uhU-k7-ggB" firstAttribute="leading" secondItem="rQe-O8-M9q" secondAttribute="leading" constant="132" id="12t-se-mWs"/>
+                                                        <constraint firstItem="uhU-k7-ggB" firstAttribute="leading" secondItem="rQe-O8-M9q" secondAttribute="leading" constant="158" id="12t-se-mWs"/>
                                                         <constraint firstAttribute="trailing" secondItem="GXB-Y8-hvL" secondAttribute="trailing" constant="15" id="2xu-iz-dnm"/>
-                                                        <constraint firstItem="GXB-Y8-hvL" firstAttribute="leading" secondItem="rQe-O8-M9q" secondAttribute="leading" constant="132" id="4NL-W5-kBp"/>
+                                                        <constraint firstItem="GXB-Y8-hvL" firstAttribute="leading" secondItem="rQe-O8-M9q" secondAttribute="leading" constant="158" id="4NL-W5-kBp"/>
                                                         <constraint firstAttribute="bottom" secondItem="uhU-k7-ggB" secondAttribute="bottom" constant="22.5" id="8NB-9G-nVN"/>
                                                         <constraint firstItem="GXB-Y8-hvL" firstAttribute="top" secondItem="rQe-O8-M9q" secondAttribute="top" constant="5" id="Hdg-h7-4lX"/>
-                                                        <constraint firstAttribute="trailing" secondItem="3aj-6J-fsE" secondAttribute="trailing" constant="251" id="Nrx-rt-Ez9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3aj-6J-fsE" secondAttribute="trailing" constant="286" id="Nrx-rt-Ez9"/>
                                                         <constraint firstAttribute="bottom" secondItem="GXB-Y8-hvL" secondAttribute="bottom" constant="51.5" id="XLY-1e-RG6"/>
-                                                        <constraint firstItem="3aj-6J-fsE" firstAttribute="top" secondItem="rQe-O8-M9q" secondAttribute="top" constant="5" id="bqQ-qd-WoK"/>
+                                                        <constraint firstItem="3aj-6J-fsE" firstAttribute="top" secondItem="rQe-O8-M9q" secondAttribute="top" constant="11" id="bqQ-qd-WoK"/>
                                                         <constraint firstAttribute="trailing" secondItem="uhU-k7-ggB" secondAttribute="trailing" constant="15" id="c2F-Ea-n7N"/>
                                                         <constraint firstItem="3aj-6J-fsE" firstAttribute="leading" secondItem="rQe-O8-M9q" secondAttribute="leading" constant="7" id="gds-Ia-Akd"/>
+                                                        <constraint firstItem="uhU-k7-ggB" firstAttribute="leading" secondItem="3aj-6J-fsE" secondAttribute="trailing" constant="69" id="n98-q2-oBk"/>
                                                         <constraint firstItem="uhU-k7-ggB" firstAttribute="top" secondItem="rQe-O8-M9q" secondAttribute="top" constant="51" id="okC-gN-IEI"/>
+                                                        <constraint firstItem="GXB-Y8-hvL" firstAttribute="leading" secondItem="3aj-6J-fsE" secondAttribute="trailing" constant="69" id="pwj-iw-Tcw"/>
                                                         <constraint firstAttribute="bottom" secondItem="3aj-6J-fsE" secondAttribute="bottom" constant="5.5" id="uH7-UI-p9L"/>
                                                     </constraints>
                                                 </tableViewCellContentView>

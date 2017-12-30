@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
    
     @IBOutlet var TitleName: UILabel!
     
-    @IBOutlet var cellLyrics: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +26,7 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }
