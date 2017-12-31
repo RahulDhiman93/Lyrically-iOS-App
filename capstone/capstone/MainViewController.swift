@@ -134,6 +134,8 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
             }
             if success == false {
                 DispatchQueue.main.async{
+                    print("internet error")
+                    self.ind.stopAnimating()
                     self.alert(message: error!)
                 }
             }
