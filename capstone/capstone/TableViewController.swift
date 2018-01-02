@@ -54,6 +54,17 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sgName = userArray[indexPath.row]
+        self.performSegue(withIdentifier: "seg", sender: sgName.lyrics)
+        
+    }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sg = segue.destination as! LyricsViewController
+        sg.song = sender as! String
+    }
         
 
     

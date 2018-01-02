@@ -138,6 +138,7 @@
                     <navigationItem key="navigationItem" id="T9q-e2-9Ou"/>
                     <connections>
                         <outlet property="tableView" destination="jvx-sv-0Vg" id="VZZ-2Z-LJW"/>
+                        <segue destination="HCR-T3-Im8" kind="show" identifier="seg" id="jLR-gz-P8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNd-ID-hsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,4 +263,7 @@
         <image name="order" width="30" height="30"/>
         <image name="search" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jLR-gz-P8S"/>
+    </inferredMetricsTieBreakers>
 </document>

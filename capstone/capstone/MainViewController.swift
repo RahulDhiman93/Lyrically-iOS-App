@@ -19,6 +19,7 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
     
     
     
+    
     @IBOutlet var searchBtn: UIButton!
     
     @IBOutlet var artistname: UITextField!
