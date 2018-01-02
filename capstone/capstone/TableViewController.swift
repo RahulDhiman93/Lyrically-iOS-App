@@ -49,7 +49,7 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
         let arName = userArray[indexPath.row]
         cell.artistName.text = arName.name
         cell.TitleName.text = arName.song
-        
+      
         
         
         return cell
@@ -58,8 +58,13 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sgName = userArray[indexPath.row]
         self.performSegue(withIdentifier: "seg", sender: sgName.lyrics)
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
         
     }
+    
+    
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sg = segue.destination as! LyricsViewController
