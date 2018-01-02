@@ -64,6 +64,29 @@ class TableViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        if editingStyle == .delete{
+            
+            let usr = userArray[indexPath.row]
+            context.delete(usr)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do{
+                userArray = try context.fetch(Artist.fetchRequest())
+            }
+            catch{
+                alert(message: "Error in deleting history")
+            }
+            
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
     
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
