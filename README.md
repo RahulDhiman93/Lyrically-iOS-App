@@ -5,3 +5,5 @@
 
 
 3). There are two sections in this app. One is search section where you can search your lyrics and one is history section where you can see your search history
+
+4). In history section you can click on any row and the app will show you your previously searched without any need to connect to internet.
