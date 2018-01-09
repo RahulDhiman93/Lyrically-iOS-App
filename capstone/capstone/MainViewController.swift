@@ -33,6 +33,8 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
         super.viewDidLoad()
         self.artistname.delegate = self
         self.songname.delegate = self
+        self.searchBtn.layer.cornerRadius = 10
+        self.searchBtn.clipsToBounds = true
         
         DispatchQueue.main.async {
       
@@ -44,7 +46,7 @@ class MainViewController: UIViewController,UITextViewDelegate,UITextFieldDelegat
     @IBAction func btn(_ sender: Any) {
         
         
-        print("IM IN BTN")
+        //print("IM IN BTN")
         
         self.view?.alpha = 0.7
         view.endEditing(true)
