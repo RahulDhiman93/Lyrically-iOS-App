@@ -10,21 +10,10 @@ import UIKit
 
 class LyricsViewController: UIViewController {
     
-
-    
-   
-    
     var song:String = ""
-    
-    
     
     @IBOutlet var lyricstext: UITextView!
     
-    
-    
-    
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +26,5 @@ class LyricsViewController: UIViewController {
         lyricstext.isEditable = false
         
     }
-
-    
 
 }

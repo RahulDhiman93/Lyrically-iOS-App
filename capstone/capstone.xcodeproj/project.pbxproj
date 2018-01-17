@@ -25,6 +25,7 @@
 		08E987061FF2BB6400BCB7F7 /* capstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E987051FF2BB6400BCB7F7 /* capstoneTests.swift */; };
 		08E987111FF2BB6400BCB7F7 /* capstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E987101FF2BB6400BCB7F7 /* capstoneUITests.swift */; };
 		08E987201FF2C21A00BCB7F7 /* LyricsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9871F1FF2C21A00BCB7F7 /* LyricsNetworking.swift */; };
+		08F6A85D200F043200C37FB6 /* InternetErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F6A85C200F043200C37FB6 /* InternetErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		08E987101FF2BB6400BCB7F7 /* capstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capstoneUITests.swift; sourceTree = "<group>"; };
 		08E987121FF2BB6400BCB7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08E9871F1FF2C21A00BCB7F7 /* LyricsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsNetworking.swift; sourceTree = "<group>"; };
+		08F6A85C200F043200C37FB6 /* InternetErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetErrorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				089211791FF55E5400327313 /* TableViewCell.swift */,
 				0892117D1FF5644B00327313 /* TableViewController.swift */,
 				089211811FF564CB00327313 /* OriginViewController.swift */,
+				08F6A85C200F043200C37FB6 /* InternetErrorViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				0892116C1FF55AAC00327313 /* Artist+CoreDataClass.swift in Sources */,
 				08462CA01FF6E4FC004F31D6 /* LYRICS.swift in Sources */,
 				0892117E1FF5644B00327313 /* TableViewController.swift in Sources */,
+				08F6A85D200F043200C37FB6 /* InternetErrorViewController.swift in Sources */,
 				0892116A1FF55A7C00327313 /* CoreDataStack.swift in Sources */,
 				0892117A1FF55E5400327313 /* TableViewCell.swift in Sources */,
 				089211631FF400D400327313 /* LyricsViewController.swift in Sources */,

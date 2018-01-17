@@ -216,6 +216,13 @@ extension MainViewController {
     {
         DispatchQueue.main.async {
             
+            if message == "The Internet connection appears to be offline." {
+                let editor = self.storyboard!.instantiateViewController(withIdentifier: "internet")
+                self.present(editor, animated: true, completion: nil)
+                self.UISetup(enable: true)
+            }
+            
+            else{
             
             let alertview = UIAlertController(title: "", message: message, preferredStyle: .alert)
             alertview.addAction(UIAlertAction(title: "Try Again!", style: .default, handler: {
@@ -228,6 +235,7 @@ extension MainViewController {
                 }
             }))
             self.present(alertview, animated: true, completion: nil)
+        }
         }
     }
     
