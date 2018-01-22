@@ -26,6 +26,8 @@ class InternetErrorViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         }
         
+        print("im in button")
+        
     }
     
     
